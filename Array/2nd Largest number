@@ -1,0 +1,15 @@
+class Solution {
+    int print2largest(int arr[], int n) {
+        // code here
+        int max =0,max2=0;
+        for(int i:arr){
+            if(i>max){
+                max2 = max;
+                max=i;
+            }
+            if(i>max2 && i<max)
+                max2 = i;
+        }
+        return max2>0?max2:-1;
+    }
+}
